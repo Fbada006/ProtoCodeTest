@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.droidafricana.protocodetest.db.UserDb
 
 class LoginViewModel @ViewModelInject constructor(private val userDb: UserDb) : ViewModel() {
+
     private val _navigateToMainScreen = MutableLiveData(false)
 
     val navigateToMainScreen: LiveData<Boolean>
