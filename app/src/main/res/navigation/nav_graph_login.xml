@@ -12,9 +12,7 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_dest_login_fragment_to_dest_register_fragment"
-            app:destination="@id/dest_register_fragment"
-            app:popUpTo="@+id/dest_login_fragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/dest_register_fragment" />
     </fragment>
 
     <fragment
@@ -24,8 +22,6 @@
         tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_dest_register_fragment_to_dest_login_fragment"
-            app:destination="@id/dest_register_fragment"
-            app:popUpTo="@+id/dest_login_fragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/dest_login_fragment" />
     </fragment>
 </navigation>

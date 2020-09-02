@@ -23,7 +23,15 @@ class LoginViewModel @ViewModelInject constructor(private val userDb: UserDb) : 
         }
     }
 
-    fun onRegisterClicked(phone: String, password: String, confirmPass: String) {
+    fun onRegisterClicked(
+        phone: String,
+        password: String,
+        confirmPass: String,
+        navigate: Boolean = false
+    ) {
+        if (navigate) {
+            _isRegisterSuccess.value = true
+        }
         if (phone.isNotEmpty() && password.isNotEmpty() && confirmPass.isNotEmpty()) {
             if (password == confirmPass) {
                 try {
