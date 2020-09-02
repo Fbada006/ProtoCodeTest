@@ -5,24 +5,34 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.droidafricana.protocodetest.db.UserDb
-import com.droidafricana.protocodetest.utils.Event
 
 class LoginViewModel @ViewModelInject constructor(private val userDb: UserDb) : ViewModel() {
+    private val _navigateToMainScreen = MutableLiveData(false)
 
-    private val _navigateToMainScreen = MutableLiveData<Event<Boolean>>()
-
-    val navigateToMainScreen: LiveData<Event<Boolean>>
+    val navigateToMainScreen: LiveData<Boolean>
         get() = _navigateToMainScreen
+
+    private val _isRegisterSuccess = MutableLiveData(false)
+
+    val isRegisterSuccess: LiveData<Boolean>
+        get() = _isRegisterSuccess
 
     fun onLoginClicked(phone: String, password: String) {
         if (phone.isNotEmpty() && password.isNotEmpty()) {
-            if (userDb.getString(phone) != "") {
-                _navigateToMainScreen.value = Event(true)
-            }
+            _navigateToMainScreen.value = userDb.getString(phone) != ""
         }
     }
 
-    fun onRegisterClicked() {
-        TODO("Not yet implemented")
+    fun onRegisterClicked(phone: String, password: String, confirmPass: String) {
+        if (phone.isNotEmpty() && password.isNotEmpty() && confirmPass.isNotEmpty()) {
+            if (password == confirmPass) {
+                try {
+                    userDb.putString(phone, confirmPass)
+                    _isRegisterSuccess.value = true
+                } catch (ex: Exception) {
+                    ex.printStackTrace()
+                }
+            }
+        }
     }
 }
