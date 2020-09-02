@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".LoginActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/proto_logo"
@@ -76,6 +76,19 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/sign_in"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/register_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/register"
                 android:textSize="@dimen/text_size_18"
                 android:textStyle="bold" />
         </LinearLayout>

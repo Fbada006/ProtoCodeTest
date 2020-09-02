@@ -3,5 +3,10 @@
     <string name="phone_hint">Phone Number</string>
     <string name="password_hint">Password</string>
     <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
     <string name="proto_logo">Proto logo</string>
+    <string name="have_account">Have account?</string>
+    <string name="login_failed">Login failed. Please retry</string>
+    <string name="registration_failed">Something went wrong. Please try again</string>
+    <string name="registration_successful">Successfully registered. Please log in</string>
 </resources>
