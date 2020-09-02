@@ -3,11 +3,13 @@ package com.droidafricana.protocodetest.db
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 
-class UserDb(appContext: Context) {
+class UserDb @Inject constructor(@ApplicationContext context: Context) {
 
     private val preferences: SharedPreferences =
-        PreferenceManager.getDefaultSharedPreferences(appContext)
+        PreferenceManager.getDefaultSharedPreferences(context)
 
     /**
      * Get String value from SharedPreferences at 'key'. If key not found, return ""

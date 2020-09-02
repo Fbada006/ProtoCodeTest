@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".LoginActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/proto_logo"
@@ -60,24 +60,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password_hint"
-                    android:imeActionLabel="Sign in"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/phone_sign_in_button"
-                style="?android:textAppearanceSmall"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_12"
-                android:backgroundTint="@color/colorAccent"
-                android:clickable="true"
-                android:focusable="true"
-                android:text="@string/sign_in"
-                android:textSize="@dimen/text_size_18"
-                android:textStyle="bold" />
+                android:padding="@dimen/margin_8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_hint"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/register_button"
@@ -89,6 +91,19 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/register"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/phone_sign_in_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/have_account"
                 android:textSize="@dimen/text_size_18"
                 android:textStyle="bold" />
         </LinearLayout>
