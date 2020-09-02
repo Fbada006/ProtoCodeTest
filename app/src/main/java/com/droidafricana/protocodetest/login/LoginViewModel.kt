@@ -9,11 +9,10 @@ import com.droidafricana.protocodetest.db.UserDb
 class LoginViewModel @ViewModelInject constructor(private val userDb: UserDb) : ViewModel() {
 
     private val _navigateToMainScreen = MutableLiveData(false)
+    private val _isRegisterSuccess = MutableLiveData(false)
 
     val navigateToMainScreen: LiveData<Boolean>
         get() = _navigateToMainScreen
-
-    private val _isRegisterSuccess = MutableLiveData(false)
 
     val isRegisterSuccess: LiveData<Boolean>
         get() = _isRegisterSuccess
