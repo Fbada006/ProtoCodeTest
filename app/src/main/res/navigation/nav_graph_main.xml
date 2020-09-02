@@ -10,9 +10,16 @@
         android:name="com.droidafricana.protocodetest.main.LPGProductsFragment"
         android:label="@string/our_lpg_products"
         tools:layout="@layout/fragment_lpg_products" />
+
     <fragment
         android:id="@+id/dest_accessories_fragment"
         android:name="com.droidafricana.protocodetest.main.AccessoriesFragment"
         android:label="@string/our_accessories"
         tools:layout="@layout/fragment_accessories" />
+
+    <fragment
+        android:id="@+id/dest_order_summary_fragment"
+        android:name="com.droidafricana.protocodetest.main.OrderSummaryFragment"
+        android:label="@string/your_order"
+        tools:layout="@layout/fragment_order_summary" />
 </navigation>
