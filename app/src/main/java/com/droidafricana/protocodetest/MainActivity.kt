@@ -9,7 +9,8 @@ import kotlinx.android.synthetic.main.activity_main.toolbar
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private val destinationsList = listOf(R.id.dest_register_fragment, R.id.dest_login_fragment)
+    private val destinationsList =
+        listOf(R.id.dest_register_fragment, R.id.dest_login_fragment)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
