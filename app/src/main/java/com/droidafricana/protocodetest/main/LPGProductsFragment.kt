@@ -29,7 +29,7 @@ class LPGProductsFragment : Fragment() {
     }
 
     private fun onForwardFabClicked() {
-        binding.forwardFab.setOnClickListener {
+        binding.accessoryFab.setOnClickListener {
             val smallOutright = binding.outrightLayout.small_cylinder.text.toString().toIntOrNull()
             val bigOutright = binding.outrightLayout.big_cylinder.text.toString().toIntOrNull()
             val smallRefill = binding.refillLayout.small_cylinder.text.toString().toIntOrNull()

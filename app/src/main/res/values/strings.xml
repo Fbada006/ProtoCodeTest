@@ -20,4 +20,13 @@
     <string name="_6_kgs_hint">6 Kgs</string>
     <string name="_13_kg_label">13 Kg :</string>
     <string name="_13_kg_hint">13 Kg</string>
+    <string name="meko_grill_6kg">Meko Grill 6KG @400:</string>
+    <string name="_6kg_meko_grill_hint">6KG meko grill</string>
+    <string name="meko_grill_13kg">Meko Grill 13KG @700:</string>
+    <string name="_13kg_meko_grill_hint">13KG meko grill</string>
+    <string name="cooker">Cooker @1500:</string>
+    <string name="cooker_hint">Cooker</string>
+    <string name="regulator">Regulator @300:</string>
+    <string name="regulator_hint">Regulator</string>
+    <string name="flame_description">Flame</string>
 </resources>
