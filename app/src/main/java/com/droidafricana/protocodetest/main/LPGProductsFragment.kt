@@ -43,7 +43,9 @@ class LPGProductsFragment : Fragment() {
             )
 
             findNavController().navigate(
-                LPGProductsFragmentDirections.actionDestLpgProductsFragmentToDestAccessoriesFragment()
+                LPGProductsFragmentDirections.actionDestLpgProductsFragmentToDestAccessoriesFragment(
+                    order
+                )
             )
         }
     }

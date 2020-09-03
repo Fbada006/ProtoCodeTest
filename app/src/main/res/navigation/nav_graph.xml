@@ -36,9 +36,6 @@
         <action
             android:id="@+id/action_dest_lpg_products_fragment_to_dest_accessories_fragment"
             app:destination="@id/dest_accessories_fragment" />
-        <action
-            android:id="@+id/action_dest_lpg_products_fragment_to_dest_order_summary_fragment"
-            app:destination="@id/dest_order_summary_fragment" />
     </fragment>
 
     <fragment
@@ -49,6 +46,9 @@
         <action
             android:id="@+id/action_dest_accessories_fragment_to_dest_order_summary_fragment"
             app:destination="@id/dest_order_summary_fragment" />
+        <argument
+            android:name="order"
+            app:argType="com.droidafricana.protocodetest.models.LPGOrder" />
     </fragment>
 
     <fragment
