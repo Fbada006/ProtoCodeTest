@@ -37,8 +37,10 @@ class LoginFragment : Fragment() {
     private fun observeLogin() {
         loginViewModel.navigateToMainScreen.observe(viewLifecycleOwner, {
             if (it) {
-                // navigate
                 makeToast("Login successful!")
+                findNavController().navigate(
+                    LoginFragmentDirections.actionDestLoginFragmentToDestHomeFragment()
+                )
             } else {
                 binding.root.makeSnack(getString(R.string.login_failed))
             }

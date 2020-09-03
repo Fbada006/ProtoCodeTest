@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_dest_login_fragment_to_dest_register_fragment"
             app:destination="@id/dest_register_fragment" />
+        <action
+            android:id="@+id/action_dest_login_fragment_to_dest_home_fragment"
+            app:destination="@id/dest_home_fragment" />
     </fragment>
 
     <fragment
@@ -22,4 +25,9 @@
             android:id="@+id/action_dest_register_fragment_to_dest_login_fragment"
             app:destination="@id/dest_login_fragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/dest_home_fragment"
+        android:name="com.droidafricana.protocodetest.main.HomeFragment"
+        tools:layout="@layout/fragment_home" />
 </navigation>
