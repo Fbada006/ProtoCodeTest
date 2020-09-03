@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Outright Purchase"
+                android:text="@string/outright_purchase_label"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_size_18"
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="An outright product means a sold product where the customer buys both the cylinder and the gas. Enter order details below."
+                android:text="@string/outright_purchase_description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <include
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Refill"
+                android:text="@string/refill_label"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_size_18"
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="In any refill cylinder sold out, we expect a return cylinder of the same size and same quantity of issued filled cylinder(s) sold out. Enter order details below."
+                android:text="@string/refill_description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <include

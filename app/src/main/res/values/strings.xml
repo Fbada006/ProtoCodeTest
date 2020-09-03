@@ -12,4 +12,8 @@
     <string name="login_failed">Login failed. Please retry</string>
     <string name="registration_failed">Something went wrong. Please try again</string>
     <string name="registration_successful">Successfully registered. Please log in</string>
+    <string name="outright_purchase_label">Outright Purchase</string>
+    <string name="outright_purchase_description">An outright product means a sold product where the customer buys both the cylinder and the gas. Enter order details below.</string>
+    <string name="refill_label">Refill</string>
+    <string name="refill_description">In any refill cylinder sold out, we expect a return cylinder of the same size and same quantity of issued filled cylinder(s) sold out. Enter order details below.</string>
 </resources>
