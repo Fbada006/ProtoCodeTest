@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
             if (it) {
                 makeToast("Login successful!")
                 findNavController().navigate(
-                    LoginFragmentDirections.actionDestLoginFragmentToDestHomeFragment()
+                    LoginFragmentDirections.actionDestLoginFragmentToDestLpgProductsFragment()
                 )
             } else {
                 binding.root.makeSnack(getString(R.string.login_failed))

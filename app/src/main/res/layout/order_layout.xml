@@ -18,7 +18,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/et_6"
+            android:id="@+id/small_cylinder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/_6_kgs_hint"
@@ -39,7 +39,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/et_13"
+            android:id="@+id/big_cylinder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/_13_kg_hint"
