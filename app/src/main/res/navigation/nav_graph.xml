@@ -14,7 +14,10 @@
             app:destination="@id/dest_register_fragment" />
         <action
             android:id="@+id/action_dest_login_fragment_to_dest_lpg_products_fragment"
-            app:destination="@id/dest_lpg_products_fragment" />
+            app:destination="@id/dest_lpg_products_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/dest_login_fragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -30,7 +33,7 @@
         android:id="@+id/dest_lpg_products_fragment"
         android:name="com.droidafricana.protocodetest.main.LPGProductsFragment"
         android:label="@string/our_lpg_products"
-        tools:layout="@layout/fragment_lpg_products" >
+        tools:layout="@layout/fragment_lpg_products">
         <action
             android:id="@+id/action_dest_lpg_products_fragment_to_dest_accessories_fragment"
             app:destination="@id/dest_accessories_fragment" />
@@ -43,7 +46,7 @@
         android:id="@+id/dest_accessories_fragment"
         android:name="com.droidafricana.protocodetest.main.AccessoriesFragment"
         android:label="@string/our_accessories"
-        tools:layout="@layout/fragment_accessories" >
+        tools:layout="@layout/fragment_accessories">
         <action
             android:id="@+id/action_dest_accessories_fragment_to_dest_order_summary_fragment"
             app:destination="@id/dest_order_summary_fragment" />
