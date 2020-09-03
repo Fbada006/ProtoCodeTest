@@ -16,4 +16,8 @@
     <string name="outright_purchase_description">An outright product means a sold product where the customer buys both the cylinder and the gas. Enter order details below.</string>
     <string name="refill_label">Refill</string>
     <string name="refill_description">In any refill cylinder sold out, we expect a return cylinder of the same size and same quantity of issued filled cylinder(s) sold out. Enter order details below.</string>
+    <string name="_6_kg_label">6 Kg :</string>
+    <string name="_6_kgs_hint">6 Kgs</string>
+    <string name="_13_kg_label">13 Kg :</string>
+    <string name="_13_kg_hint">13 Kg</string>
 </resources>

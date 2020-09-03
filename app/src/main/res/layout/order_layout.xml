@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6 Kg :"
+            android:text="@string/_6_kg_label"
             android:textSize="@dimen/text_size_18"
             android:textStyle="bold" />
 
@@ -21,7 +21,7 @@
             android:id="@+id/et_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="6 Kgs"
+            android:hint="@string/_6_kgs_hint"
             android:inputType="number" />
     </LinearLayout>
 
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="13 Kg :"
+            android:text="@string/_13_kg_label"
             android:textSize="@dimen/text_size_18"
             android:textStyle="bold" />
 
@@ -42,7 +42,7 @@
             android:id="@+id/btn_poid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="13 Kg"
+            android:hint="@string/_13_kg_hint"
             android:inputType="number" />
     </LinearLayout>
 
