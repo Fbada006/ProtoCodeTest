@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.droidafricana.protocodetest.R
 import com.droidafricana.protocodetest.databinding.FragmentOrderSummaryBinding
 import com.droidafricana.protocodetest.utils.generateOrderList
+import com.droidafricana.protocodetest.utils.makeToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,6 +20,7 @@ class OrderSummaryFragment : Fragment() {
     private lateinit var binding: FragmentOrderSummaryBinding
     private val args: OrderSummaryFragmentArgs by navArgs()
     private val viewModel: OrderViewModel by viewModels()
+    private val order = args.order
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +28,7 @@ class OrderSummaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOrderSummaryBinding.inflate(inflater, container, false)
-        viewModel.generateOrderTotal(args.order)
+        viewModel.generateOrderTotal(order)
         return binding.root
     }
 
@@ -43,7 +45,15 @@ class OrderSummaryFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-        orderAdapter.submitList(args.order.generateOrderList())
+        orderAdapter.submitList(order.generateOrderList())
 
+        onConfirmOrderClicked()
+    }
+
+    private fun onConfirmOrderClicked() {
+        binding.makeOrderButton.setOnClickListener {
+            makeToast(getString(R.string.this_is_a_dril))
+            viewModel.sendFakePostRequest(order)
+        }
     }
 }
