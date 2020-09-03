@@ -14,9 +14,9 @@ class OrderViewModel @ViewModelInject constructor() : ViewModel() {
     val orderTotal: LiveData<Int>
         get() = _orderTotal
 
-    fun generateOrderTotal(order: Order): Int {
+    fun generateOrderTotal(order: Order) {
         val orderItems = order.generateOrderList()
-        return orderItems.map {
+        _orderTotal.value = orderItems.map {
             it.totalPrice
         }.sum()
     }
