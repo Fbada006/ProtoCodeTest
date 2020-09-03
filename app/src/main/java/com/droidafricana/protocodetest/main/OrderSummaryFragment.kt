@@ -28,7 +28,7 @@ class OrderSummaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOrderSummaryBinding.inflate(inflater, container, false)
-        viewModel.generateOrderTotal(order)
+        order?.let { viewModel.generateOrderTotal(it) }
         return binding.root
     }
 
@@ -45,7 +45,7 @@ class OrderSummaryFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-        orderAdapter.submitList(order.generateOrderList())
+        orderAdapter.submitList(order?.generateOrderList())
 
         onConfirmOrderClicked()
     }
@@ -53,7 +53,7 @@ class OrderSummaryFragment : Fragment() {
     private fun onConfirmOrderClicked() {
         binding.makeOrderButton.setOnClickListener {
             makeToast(getString(R.string.this_is_a_dril))
-            viewModel.sendFakePostRequest(order)
+            order?.let { order -> viewModel.sendFakePostRequest(order) }
         }
     }
 }

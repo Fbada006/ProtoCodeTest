@@ -7,8 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.droidafricana.protocodetest.R
 import com.droidafricana.protocodetest.databinding.FragmentAccessoriesBinding
 import com.droidafricana.protocodetest.models.Accessory
+import com.droidafricana.protocodetest.utils.generateOrderList
+import com.droidafricana.protocodetest.utils.makeToast
 import com.droidafricana.protocodetest.utils.toOrder
 
 class AccessoriesFragment : Fragment() {
@@ -44,11 +47,15 @@ class AccessoriesFragment : Fragment() {
                 regulator = regulator
             ).toOrder(args.order)
 
-            findNavController().navigate(
-                AccessoriesFragmentDirections.actionDestAccessoriesFragmentToDestOrderSummaryFragment(
-                    order
+            if (order.generateOrderList().isNotEmpty()) {
+                findNavController().navigate(
+                    AccessoriesFragmentDirections.actionDestAccessoriesFragmentToDestOrderSummaryFragment(
+                        order
+                    )
                 )
-            )
+            } else {
+                makeToast(getString(R.string.order_cannot_empty))
+            }
         }
     }
 }

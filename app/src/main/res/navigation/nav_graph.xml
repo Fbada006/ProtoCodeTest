@@ -58,6 +58,7 @@
         tools:layout="@layout/fragment_order_summary" >
         <argument
             android:name="order"
-            app:argType="com.droidafricana.protocodetest.models.Order" />
+            app:argType="com.droidafricana.protocodetest.models.Order"
+            app:nullable="true" />
     </fragment>
 </navigation>
