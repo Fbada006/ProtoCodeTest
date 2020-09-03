@@ -15,7 +15,6 @@
         <action
             android:id="@+id/action_dest_login_fragment_to_dest_lpg_products_fragment"
             app:destination="@id/dest_lpg_products_fragment"
-            app:launchSingleTop="true"
             app:popUpTo="@+id/dest_login_fragment"
             app:popUpToInclusive="true" />
     </fragment>
