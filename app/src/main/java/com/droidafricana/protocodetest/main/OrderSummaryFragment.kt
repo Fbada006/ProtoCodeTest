@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.droidafricana.protocodetest.R
 import com.droidafricana.protocodetest.databinding.FragmentOrderSummaryBinding
+import com.droidafricana.protocodetest.models.Order
 import com.droidafricana.protocodetest.utils.generateOrderList
 import com.droidafricana.protocodetest.utils.makeToast
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,7 +21,7 @@ class OrderSummaryFragment : Fragment() {
     private lateinit var binding: FragmentOrderSummaryBinding
     private val args: OrderSummaryFragmentArgs by navArgs()
     private val viewModel: OrderViewModel by viewModels()
-    private val order = args.order
+    private var order: Order? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +29,7 @@ class OrderSummaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOrderSummaryBinding.inflate(inflater, container, false)
+        order = args.order
         order?.let { viewModel.generateOrderTotal(it) }
         return binding.root
     }
