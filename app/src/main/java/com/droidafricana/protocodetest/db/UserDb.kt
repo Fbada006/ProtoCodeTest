@@ -28,11 +28,4 @@ class UserDb @Inject constructor(@ApplicationContext context: Context) {
     fun putString(key: String, value: String) {
         preferences.edit().putString(key, value).apply()
     }
-
-    /**
-     * Clear SharedPreferences (remove everything)
-     */
-    fun clear() {
-        preferences.edit().clear().apply()
-    }
 }
