@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id in destinationsList) {
-                //Hide the toolbar
                 toolbar.visibility = View.GONE
             } else {
                 toolbar.visibility = View.VISIBLE
