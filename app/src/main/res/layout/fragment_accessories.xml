@@ -1,6 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
 
+    <ImageView
+        android:id="@+id/proto_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:contentDescription="@string/flame_description"
+        android:src="@drawable/proto_logo"
+        app:layout_constraintBottom_toTopOf="@+id/small_grill_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/small_grill_layout"
+        style="@style/AccessoryCardView"
+        app:layout_constraintBottom_toTopOf="@+id/big_grill_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proto_logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meko_grill_6kg"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/small_grill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/_6kg_meko_grill_hint"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/big_grill_layout"
+        style="@style/AccessoryCardView"
+        app:layout_constraintBottom_toTopOf="@+id/cooker_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/small_grill_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meko_grill_13kg"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/big_grill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/_13kg_meko_grill_hint"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cooker_layout"
+        style="@style/AccessoryCardView"
+        app:layout_constraintBottom_toTopOf="@+id/regulator_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/big_grill_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cooker"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cooker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/cooker_hint"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/regulator_layout"
+        style="@style/AccessoryCardView"
+        app:layout_constraintBottom_toTopOf="@+id/order_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cooker_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/regulator"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/regulator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/regulator_hint"
+                android:inputType="number" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/order_fab"
+        style="@style/ForwardFabStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regulator_layout"
+        app:srcCompat="@drawable/ic_arrow_forward" />
 </androidx.constraintlayout.widget.ConstraintLayout>
